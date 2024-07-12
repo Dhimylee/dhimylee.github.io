@@ -136,3 +136,27 @@ img {
 	z-index: var(--z-fixed);
 	background-color: var(--body-color);
 }
+
+/* ==================== NAV ==================== */
+.nav {
+	max-width: 968px;
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+	color: var(--title-color);
+	font-weight: var(--font-medium);
+}
+
+.nav__logo:hover { color: var(--first-color); }
+
+.nav__toggle {
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+.nav__toggle:hover { color: var(--first-color);}
