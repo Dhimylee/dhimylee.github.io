@@ -678,3 +678,10 @@ img {
 	background-color: var(--first-color);
 }
 
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet {
+	outline: none;
+}
+
+/* 1870x1036 img */
