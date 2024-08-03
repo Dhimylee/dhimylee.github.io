@@ -152,4 +152,10 @@ function scrollHeader() {
 }
 window.addEventListener('scroll', scrollHeader)
 
-/* ==================== SHOW SCROLL TOP ==================== */
+/* ==================== SHOW SCROLL UP ==================== */
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up');
+    //When the scroll is higher than 560 viewport height, add the shwo scroll class to the a tag with the scroll
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollUp)
