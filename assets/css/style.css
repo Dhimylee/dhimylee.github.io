@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ==================== VARIABLES CSS ==================== */
+/* ==================== VARIAVEIS CSS ==================== */
 :root {
 	--header-height: 3rem;
 
@@ -22,6 +22,8 @@
 	--input-color: hsl(var(--hue-color), 70%, 96%);
 	--body-color: hsl(var(--hue-color), 60%, 99%);
 	--container-color: #fff;
+	--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
 	/* ========== Font and typography ========== */
 	--body-font: 'Poppins', sans-serif;
@@ -68,6 +70,36 @@
 		--small-font-size: .875rem;
 		--smaller-font-size: .813rem;
 	}
+}
+
+/* ========== Variaveis Dark Theme ========== */
+body.dark-theme {
+	/* HSL color mode */
+	--first-color-second: hsl(var(--hue-color), 30%, 8%);
+	--title-color: hsl(var(--hue-color), 8%, 95%);
+	--text-color: hsl(var(--hue-color), 8%, 75%);
+	--input-color: hsl(var(--hue-color), 29%, 16%);
+	--body-color: hsl(var(--hue-color), 28%, 12%);
+	--container-color: hsl(var(--hue-color), 29%, 16%); 
+	--scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+/* ========== Button Dark/Light ========== */
+.nav__btns {
+	display: flex;
+	align-items: center;
+}
+
+.change-theme {
+	font-size: 1.25rem;
+	color: var(--title-color);
+	margin-right: var(--mb-1);
+	cursor: pointer;
+}
+
+.change-theme:hover {
+	color: var(--first-color);
 }
 
 /* ==================== BASE ==================== */
@@ -899,4 +931,20 @@ img {
 /* Show scroll */
 .show-scroll {
 	bottom: 5rem;
+}
+
+/* ========== SCROLL BAR ========= */
+::-webkit-scrollbar {
+	width: .60rem;
+	background-color: var(--scroll-bar-color);
+	border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--scroll-thumb-color);
+	border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--text-color-light);
 }
