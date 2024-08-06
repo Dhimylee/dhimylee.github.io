@@ -189,3 +189,22 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+/* ==================== FORMULARIO ==================== */
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    fetch(event.target.action, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: new FormData(event.target)
+    }).then(response => {
+        if (response.ok) {
+            document.querySelector('form').reset();
+            document.querySelector('#success-message').style.display = 'block';
+        } else {
+            alert('Something went wrong. Please try again.');
+        }
+    });
+});

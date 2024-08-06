@@ -739,27 +739,27 @@
 					</div>
 				</div>
 
-				<form action="" class="contact__form grid">
+				<form action="https://formspree.io/f/xblronqb" method="POST" class="contact__form grid">
 					<div class="contact__inputs grid">
 						<div class="contact__content">
-							<label for="" class="contact__label">Nome</label>
-							<input type="text" class="contact__input">
+							<label for="name" class="contact__label">Nome</label>
+							<input type="text" class="contact__input" id="name" name="name">
 						</div>
 
 						<div class="contact__content">
-							<label for="" class="contact__label">Email</label>
-							<input type="email" class="contact__input">
+							<label for="email" class="contact__label">Email</label>
+							<input type="email" class="contact__input" id="email" name="email">
 						</div>
 					</div>
 
 					<div class="contact__content">
-						<label for="" class="contact__label">Projeto</label>
-						<input type="text" class="contact__input">
+						<label for="projeto" class="contact__label">Projeto</label>
+						<input type="text" class="contact__input" id="projeto" name="projeto">
 					</div>
 
 					<div class="contact__content">
-						<label for="" class="contact__label">Mensagem</label>
-						<textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+						<label for="mensagem" class="contact__label">Mensagem</label>
+						<textarea name="mensagem" id="mensagem" cols="0" rows="7" class="contact__input"></textarea>
 					</div>
 
 					<div>
@@ -769,6 +769,10 @@
 						</a>
 					</div>
 				</form>
+				
+				<div id="success-message" style="display: none;">
+					<p>Thank you! Your message has been sent.</p>
+				</div>
 			</div>
 		</section>
 	</main>
