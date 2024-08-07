@@ -192,19 +192,24 @@ themeButton.addEventListener('click', () => {
 
 /* ==================== FORMULARIO ==================== */
 document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Impede o envio padrão do formulário
+
     fetch(event.target.action, {
         method: 'POST',
         headers: {
             'Accept': 'application/json'
         },
         body: new FormData(event.target)
-    }).then(response => {
+    })
+    .then(response => {
         if (response.ok) {
-            document.querySelector('form').reset();
-            document.querySelector('#success-message').style.display = 'block';
+            document.querySelector('form').reset();  // Reseta o formulário
+            alert('Formulário enviado com sucesso!');  // Adiciona o alerta de sucesso
         } else {
-            alert('Something went wrong. Please try again.');
+            alert('Ocorreu um erro. Por favor, tente novamente.');  // Alerta para erro
         }
+    })
+    .catch(error => {
+        alert('Ocorreu um erro inesperado. Por favor, tente novamente.');  // Alerta para erros na requisição
     });
 });
