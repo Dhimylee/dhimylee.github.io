@@ -283,7 +283,6 @@ img {
 
 .home__blob {
 	width: 200px;
-	/* fill: var(--first-color); */
 	fill: black;
 }
 
@@ -682,7 +681,6 @@ img {
 }
 
 .portfolio__img {
-	/* width: 265px; */
 	border-radius: .5rem;
 	justify-self: center;
 }
@@ -983,9 +981,6 @@ img {
 		column-gap: 0;
 	}
 
-	.home__content {
-		/* grid-template-columns: .25fr 3fr; */
-	}
 	.home__blob {
 		width: 180px;
 	}
